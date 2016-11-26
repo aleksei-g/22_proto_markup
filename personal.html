@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+Личный кабинет
+</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"  type='text/css'  media='all'>
+    <link rel="stylesheet" href="css/main.min.css" type='text/css'  media='all'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <!-- навигационное меню -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="navbar navbar-default">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu" id="button_navbar_toggle">
+                                <span class="sr-only">Открыть навигацию</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="responsive-menu">
+                            <p class="navbar-text">Регион: </p>
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="region">Новосибирск и область
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        
+                                            <li><a href="#">Новосибирск и область</a></li>
+                                        
+                                            <li><a href="#">Москва и область</a></li>
+                                        
+                                            <li><a href="#">Нижний новгород и область</a></li>
+                                        
+                                            <li><a href="#">Киров и область</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                
+                                    <li><a href="personal.html">Леонид Федорович</a></li>
+                                    <li><a href="#">Выйти</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Основной блок -->
+    <main>
+        <div class="container">
+            <!-- Блок контента -->
+            <div class="row">
+                
+    <!-- Блок лого и навигационных цепочек -->
+    <div class="row logo">
+    <div class="col-xs-2 col-sm-2 col-md-2 height-parent text-center">
+        <h1 class="logo-vcenter"><a href="index.html">
+            <span class="glyphicon glyphicon-home"></span>
+        </a></h1>
+    </div>
+    <div class="col-xs-10 col-sm-10 col-md-10 height-parent">
+        
+            <ol class="breadcrumb logo-vcenter">
+                
+                    
+                        <li><a href=" index.html">Главная</a></li>
+                    
+                
+                    
+                        <li class="active">Личный кабинет</li>
+                    
+                
+            </ol>
+        
+    </div>
+</div>
+    <!-- Основной контент-->
+    <div class="col-md-2"></div>
+    <div class="col-sm-12 col-md-8">
+        <div class="row">
+            <!-- Строка заголовка -->
+             <div class="col-md-12">
+                 <div class="row h3-height">
+                    <div class="col-xs-8 col-sm-8 col-md-8 height-parent">
+                        <h3>Личный кабинет</h3>
+                    </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4 height-parent text-right">
+                         <p class="h3-margin"><a href="binds.html">Перейти к заявкам</a></p>
+                     </div>
+                 </div>
+            </div>
+            <!--Вкладки с формами -->
+            <div class="col-md-12">
+                <div class="tabbable tabs-left">
+                    <!-- Навигация -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#my_company" data-toggle="tab">Моя организация</a></li>
+                        <li><a href="#new_password" data-toggle="tab">Смена пароля</a></li>
+                        <li><a href="#my_delivery" data-toggle="tab">Моя рассылка</a></li>
+                    </ul>
+                </div>
+                <!-- Содержимое вкладок -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="my_company">
+                        <!-- форма организации -->
+<form class="form-horizontal" action="#" method="post">
+    <fieldset>
+        <div class="form-group">
+            <label for="f-company-name" class="col-sm-3 control-label text-right">Организация:*</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="f-company-name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-region" class="col-sm-3 control-label text-right">Регион:</label>
+            <div class="col-sm-9">
+                <select class="form-control" id="f-company-region">
+                    
+                        <option>Новосибирск и область</option>
+                    
+                        <option>Москва и область</option>
+                    
+                        <option>Нижний новгород и область</option>
+                    
+                        <option>Киров и область</option>
+                    
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-address" class="col-sm-3 control-label text-right">Адрес:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="f-company-address">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-phone" class="col-sm-3 control-label text-right">Телефон:*</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="f-company-phone" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-mail" class="col-sm-3 control-label text-right">E-mail:*</label>
+            <div class="col-sm-9">
+                <input type="email" class="form-control" id="f-company-mail" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-user" class="col-sm-3 control-label text-right">Имя:*</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="f-company-user" required>
+            </div>
+        </div>
+         <div class="form-group">
+            <label for="f-company-products" class="col-sm-3 control-label text-right">Продукция</label>
+            <div class="col-sm-9">
+                <select class="form-control" id="f-company-products">
+                    <option>ЖБИ</option>
+                    <option>Кирпич/брус</option>
+                    <option>Бетон</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-about" class="col-sm-3 control-label text-right">Описание</label>
+            <div class="col-sm-9">
+                <textarea rows="3" class="form-control" id="f-company-about"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-info">Сохранить информацию</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="new_password"><p>Новый пароль</p></div>
+                    <div role="tabpanel" class="tab-pane fade" id="my_delivery">Список рассылок пуст</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+
+            </div>
+        </div>
+    </main>
+    <!-- Футер -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                 <div class="hidden-xs hidden-sm col-md-1 col-lg-2"></div>
+                 <div class="col-sm-12 col-md-10 col-lg-8">
+                    <div class="row">
+                        <!-- форма поставщика -->
+                        
+                        <!-- Подвал сайта -->
+                        <div class="col-sm-12 col-md-12 copyright">
+                            <p class="text-right">&copy; Copyright 2016 by aleksei-g.</p>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="hidden-xs hidden-sm col-md-1 col-lg-2"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        NeedToShowNotifyMessage = "0";
+        MessageRegion = "Ваш регион: <strong>Новосибирск и область</strong>. Угадали?";
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/bootstrap-notify.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

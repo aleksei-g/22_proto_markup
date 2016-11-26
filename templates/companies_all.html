@@ -1,0 +1,51 @@
+{% extends '_main.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block main %}
+    <!-- Блок лого и навигационных цепочек -->
+    {% include "_title_links.html" %}
+    <!-- Основной контент-->
+    <div class="col-sm-12 com-md-12">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+            <div class="col-sm-12 col-md-8">
+                <div class="row">
+                    {% include "_list_of_products.html" %}
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+            <div class="col-sm-12 col-md-8">
+                <h3 class="text-left"> {{ title_main }}</h3>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+        </div>
+    </div>
+    <div class="col-sm-12 com-md-12">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+            <div class="col-sm-12 col-md-8">
+                <div class="row">
+                    <!-- Блок списка компаний -->
+                    {% include "_list_of_companies.html" %}
+                    <!-- Пагинатор -->
+                    {% include "_paginator.html" %}
+                    <div class="col-sm-12 col-md-12 text-left">
+                        <p><a href="index.html#form_bind_client" role="button">Оставить заявку</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2 text-center">
+                <p><a class="btn btn-info" href="index.html#form_bind_client" role="button">Оставить заявку</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    {% include "_form_provider.html" %}
+{% endblock %}

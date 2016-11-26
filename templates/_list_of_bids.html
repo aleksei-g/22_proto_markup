@@ -1,0 +1,38 @@
+<div class="col-sm-12 col-md-12 border-bottom">
+    <div class="row">
+        <div class="dropdown col-xs-6 col-sm-6 col-md-6">Раздел:
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Все<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Пункт 1</a></li>
+                <li><a href="#">Пункт 2</a></li>
+                <li><a href="#">Пункт 3</a></li>
+            </ul>
+        </div>
+        <div class="dropdown col-xs-6 col-sm-6 col-md-6 text-right pull-right">Регион:
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">{{ regions.selected_region }}<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                {% for region in regions.list_region %}
+                    <li><a href="{{ region.url }}">{{ region.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% for bind in list_of_binds %}
+    <div class="col-sm-12 col-md-12">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <p class="text-muted"><small>{{ bind.publication_datetime }}</small></p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                <p class="text-muted"><small><a href="#"><span class="glyphicon glyphicon-star"></span> В закладки</a></small></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 border-bottom">
+        <p>{{ bind.bind_text }}</p>
+        <p>{{ bind.user_name }}</p>
+        <button type="submit" class="btn btn-default btn-sm">Показать телефон</button>
+        <small class="text-muted">&nbsp;{{ bind.count_views }} просмотров</small>
+    </div>
+{% endfor %}

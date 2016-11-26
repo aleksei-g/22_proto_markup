@@ -1,0 +1,45 @@
+{% extends '_main.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block main %}
+    <!-- Блок лого и навигационных цепочек -->
+    {% include "_title_links.html" %}
+    <!-- Основной контент-->
+    <div class="col-md-2"></div>
+    <div class="col-sm-12 col-md-8">
+        <div class="row">
+            <!-- Строка заголовка -->
+             <div class="col-md-12">
+                 <div class="row h3-height">
+                    <div class="col-xs-8 col-sm-8 col-md-8 height-parent">
+                        <h3>Личный кабинет</h3>
+                    </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4 height-parent text-right">
+                         <p class="h3-margin"><a href="binds.html">Перейти к заявкам</a></p>
+                     </div>
+                 </div>
+            </div>
+            <!--Вкладки с формами -->
+            <div class="col-md-12">
+                <div class="tabbable tabs-left">
+                    <!-- Навигация -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#my_company" data-toggle="tab">Моя организация</a></li>
+                        <li><a href="#new_password" data-toggle="tab">Смена пароля</a></li>
+                        <li><a href="#my_delivery" data-toggle="tab">Моя рассылка</a></li>
+                    </ul>
+                </div>
+                <!-- Содержимое вкладок -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="my_company">
+                        {% include "_form_company.html" %}
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="new_password"><p>Новый пароль</p></div>
+                    <div role="tabpanel" class="tab-pane fade" id="my_delivery">Список рассылок пуст</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends '_main.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block main %}
+    <!-- Блок ссылок -->
+    <div class="col-sm-12 col-md-12">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-1"></div>
+            <div class="col-sm-12 col-md-10">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <p>Участники в Новосибирске:
+                            <strong><ins><a href="companies_all.html">105 оптовых компаний</a></ins>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <ins><a href="companies_all.html">25 производителей</a></ins></strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-1"></div>
+        </div>
+    </div>
+    <!-- Основной контент-->
+    <div class="col-sm-12 col-md-12">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+            <div class="col-sm-12 col-md-8">
+                <div class="row">
+                    <!-- Фомра заявки потребителя -->
+                    <div class="col-sm-12 col-md-12">
+                        <h3 class="text-center">Вам позвонят лучшие поставщики Новосибирска</h3>
+                    </div>
+                    {% include "_form_bind_client.html" %}
+                    <!-- Блок свежих заявок -->
+                    <div class="col-sm-12 col-md-12">
+                        <h3 class="text-center">Свежие заявки</h3>
+                    </div>
+                    {% include "_list_of_bids.html" %}
+                    <div class="col-sm-12 col-md-12 text-center">
+                        <a class="btn btn-info btn-lg" href="binds.html" role="button">Посмотреть все заявки</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2"></div>
+        </div>
+    </div>
+    <!-- Карусель отзывов -->
+    <div class="col-sm-12 col-md-12">
+        <div class="row">
+            <div class="hidden-xs col-sm-3 col-md-3"></div>
+            <div class="col-sm-6 col-md-6">
+                <div class="row">
+                    {% include "_carousel_comments.html" %}
+                </div>
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-3 carousel">
+                <div class="row carousel-caption">
+                    <div class="col-sm-12 col-md-12  height-parent">
+                        <p class="vcenter"><a class="btn btn-info" href="#" role="button">Оставить отзыв</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                <p class="text-center"><a class="btn btn-info" href="#" role="button">Оставить отзыв</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    {% include "_form_provider.html" %}
+{% endblock %}

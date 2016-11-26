@@ -1,0 +1,12 @@
+<div class="col-sm-12 col-md-12">
+    <div class="row">
+        {% for products in list_of_products %}
+            <div class="col-xs-6 com-sm-4 col-md-4">
+                <a href="{{ products.url }}">
+                    <img  class="product" src="{{ products.img }}" alt="Категория продукции">
+                    <span>{{ products.name }}</span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

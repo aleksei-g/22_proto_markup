@@ -1,0 +1,30 @@
+<div class="col-sm-12 col-md-12">
+    <div id="carousel-comments" class="carousel slide" data-ride="carousel">
+        <!-- Контент слайда (slider wrap)-->
+        <div class="carousel-inner"  role="listbox">
+            {% for i in range(list_of_comments|length ) %}
+                <div class="item {% if i == 0 %}active{% endif %}">
+                    <div class="carousel-caption">
+                        <div class="col-xs-2 height-parent">
+                            <img src="{{ list_of_comments[i].user_avatar }}" alt="Аватар">
+                        </div>
+                        <div class="col-xs-10 height-parent">
+                            <h4 class="vcenter">{{ list_of_comments[i].user_name }},
+                                {{ list_of_comments[i].user_age }} лет,
+                                г. {{ list_of_comments[i].user_city }}
+                            <small><br>{{ list_of_comments[i].comment_text }}</small>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- Элементы управления -->
+        <a class="left carousel-control" href="#carousel-comments" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-comments" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<!-- форма организации -->
+<form class="form-horizontal" action="#" method="post">
+    <fieldset>
+        <div class="form-group">
+            <label for="f-company-name" class="col-sm-3 control-label text-right">Организация:*</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="f-company-name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-region" class="col-sm-3 control-label text-right">Регион:</label>
+            <div class="col-sm-9">
+                <select class="form-control" id="f-company-region">
+                    {% for region in regions.list_region %}
+                        <option>{{ region.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-address" class="col-sm-3 control-label text-right">Адрес:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="f-company-address">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-phone" class="col-sm-3 control-label text-right">Телефон:*</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="f-company-phone" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-mail" class="col-sm-3 control-label text-right">E-mail:*</label>
+            <div class="col-sm-9">
+                <input type="email" class="form-control" id="f-company-mail" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-user" class="col-sm-3 control-label text-right">Имя:*</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="f-company-user" required>
+            </div>
+        </div>
+         <div class="form-group">
+            <label for="f-company-products" class="col-sm-3 control-label text-right">Продукция</label>
+            <div class="col-sm-9">
+                <select class="form-control" id="f-company-products">
+                    <option>ЖБИ</option>
+                    <option>Кирпич/брус</option>
+                    <option>Бетон</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="f-company-about" class="col-sm-3 control-label text-right">Описание</label>
+            <div class="col-sm-9">
+                <textarea rows="3" class="form-control" id="f-company-about"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-info">Сохранить информацию</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
