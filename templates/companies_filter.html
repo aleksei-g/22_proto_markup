@@ -6,22 +6,16 @@
     <!-- Блок лого и навигационных цепочек -->
     {% include "_title_links.html" %}
     <!-- Основной контент-->
-    <div class="col-sm 12 col-md-12">
-        <div class="row">
-            <div class="hidden-xs hidden-sm col-md-2"></div>
-            <div class="col-sm-12 col-md-8">
-                <h3 class="text-left"> {{ title_main }}
-                <small><br>{{ filter_products }}</small>
-                </h3>
-            </div>
-            <div class="hidden-xs hidden-sm col-md-2"></div>
-        </div>
-    </div>
     <div class="col-sm-12 com-md-12">
         <div class="row">
             <div class="hidden-xs hidden-sm col-md-2"></div>
             <div class="col-sm-12 col-md-8">
                 <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <h3 class="text-left"> {{ title_main }}
+                        <small><br>{{ filter_products }}</small>
+                        </h3>
+                    </div>
                     <!-- Блок списка компаний -->
                     {% include "_list_of_companies.html" %}
                     <!-- Пагинатор -->

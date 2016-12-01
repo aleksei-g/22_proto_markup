@@ -1,20 +1,22 @@
-<div class="row logo">
-    <div class="col-xs-2 col-sm-2 col-md-2 height-parent text-center">
-        <h1 class="logo-vcenter"><a href="index.html">
-            <span class="glyphicon glyphicon-home"></span>
-        </a></h1>
-    </div>
-    <div class="col-xs-10 col-sm-10 col-md-10 height-parent">
-        {% if list_links|length %}
-            <ol class="breadcrumb logo-vcenter">
-                {% for i in range(list_links|length ) %}
-                    {% if i < list_links|length - 1 %}
-                        <li><a href=" {{ list_links[i].url }}">{{ list_links[i].title }}</a></li>
-                    {% else %}
-                        <li class="active">{{ list_links[i].title }}</li>
-                    {% endif %}
-                {% endfor %}
-            </ol>
-        {% endif %}
+<div class="hidden-xs col-sm-12 col-md-12">
+    <div class="row logo">
+        <div class="col-xs-2 col-sm-2 col-md-2 height-parent text-center">
+            <h1 class="logo-vcenter"><a href="index.html">
+                <span class="glyphicon glyphicon-home"></span>
+            </a></h1>
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 height-parent">
+            {% if list_links|length %}
+                <ol class="breadcrumb logo-vcenter">
+                    {% for i in range(list_links|length ) %}
+                        {% if i < list_links|length - 1 %}
+                            <li><a href=" {{ list_links[i].url }}">{{ list_links[i].title }}</a></li>
+                        {% else %}
+                            <li class="active">{{ list_links[i].title }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            {% endif %}
+        </div>
     </div>
 </div>

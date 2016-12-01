@@ -43,7 +43,7 @@ def get_product():
 
 
 def index_page():
-    title = 'Поставщики новосибирска'
+    title = 'Поставщики Новосибирска'
     list_of_binds = [get_bind(), get_bind(), get_bind(), get_bind()]
     comment = {'user_avatar': 'img/avatar_default.png',
                'user_name': 'Кирилл',

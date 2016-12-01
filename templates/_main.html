@@ -22,6 +22,9 @@
             <div class="row">
                 <div class="navbar navbar-default">
                     <div class="container">
+                        <div class="navbar-header hidden-sm hidden-md hidden-lg pull-left">
+                            <a class="navbar-brand" href="index.html">Поставщики Новосибирска</a>
+                        </div>
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu" id="button_navbar_toggle">
                                 <span class="sr-only">Открыть навигацию</span>
@@ -31,10 +34,16 @@
                             </button>
                         </div>
                         <div class="collapse navbar-collapse" id="responsive-menu">
-                            <p class="navbar-text">Регион: </p>
+                            <ul class="nav  navbar-nav hidden-sm hidden-md hidden-lg">
+                                {% if list_links|length > 1 %}
+                                    {% for i in range(1, list_links|length - 1) %}
+                                        <li><a href=" {{ list_links[i].url }}">{{ list_links[i].title }}</a></li>
+                                    {% endfor %}
+                                {% endif %}
+                            </ul>
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="region">{{ regions.selected_region }}
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="region">Регион: {{ regions.selected_region }}
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -46,10 +55,11 @@
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 {% if user %}
-                                    <li><a href="personal.html">{{ user }}</a></li>
-                                    <li><a href="#">Выйти</a></li>
+                                    <li><a href="personal.html"><span class="glyphicon glyphicon-user"></span> {{ user }}</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Выйти</a></li>
                                 {% else %}
-                                    <li><a href="#">Войти</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Регистрация</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Войти</a></li>
                                 {% endif %}
                             </ul>
                         </div>
