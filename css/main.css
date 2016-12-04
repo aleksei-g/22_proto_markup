@@ -86,6 +86,13 @@ img {
     margin-bottom: 10px;
 }
 
+@media (min-width: 768px) {
+    .text-right-small-screen {
+    float: right !important;
+    text-align: right;
+    }
+}
+
 /* <!-- carousel */
 .carousel {
     margin-top: 30px;
