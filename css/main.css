@@ -18,7 +18,7 @@
     background-color: #f8f8f8;
 }
 
-.body-main img {
+.all-width {
     display: block;
     height: auto;
     max-width: 100%;
@@ -124,7 +124,7 @@
     table-layout: fixed;
 }
 
-.height-parent img {
+.all-height-parent {
     position: absolute;
     top: 0;
     left: 0;
@@ -178,16 +178,6 @@
     .tabs-right > .nav-tabs,
     .tabs-left > .nav-tabs {
         border-bottom: 0;
-    }
-
-    .tab-content > .tab-pane,
-    .pill-content > .pill-pane {
-        display: none;
-    }
-
-    .tab-content > .active,
-    .pill-content > .active {
-        display: block;
     }
 
     .tabs-left > .nav-tabs > li,
