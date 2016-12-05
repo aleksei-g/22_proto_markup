@@ -25,18 +25,18 @@
                 <div class="tabbable tabs-left">
                     <!-- Навигация -->
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#my_company" data-toggle="tab">Моя организация</a></li>
-                        <li><a href="#new_password" data-toggle="tab">Смена пароля</a></li>
-                        <li><a href="#my_delivery" data-toggle="tab">Моя рассылка</a></li>
+                        <li class="active"><a href="#my_company" data-toggle="tab">Организация</a></li>
+                        <li><a href="#new_password" data-toggle="tab">Пароль</a></li>
+                        <li><a href="#my_delivery" data-toggle="tab">Рассылка</a></li>
                     </ul>
-                </div>
-                <!-- Содержимое вкладок -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade in active" id="my_company">
-                        {% include "_form_company.html" %}
+                    <!-- Содержимое вкладок -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="my_company">
+                            {% include "_form_company.html" %}
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="new_password"><p>Новый пароль</p></div>
+                        <div role="tabpanel" class="tab-pane fade" id="my_delivery">Список рассылок пуст</div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="new_password"><p>Новый пароль</p></div>
-                    <div role="tabpanel" class="tab-pane fade" id="my_delivery">Список рассылок пуст</div>
                 </div>
             </div>
         </div>
