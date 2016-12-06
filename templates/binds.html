@@ -3,25 +3,27 @@
 {{ title }}
 {% endblock %}
 {% block main %}
-    <!-- Блок лого и навигационных цепочек -->
-    {% include "_title_links.html" %}
-    <!-- Основной контент-->
-    <div class="hidden-xs hidden-sm col-md-2"></div>
-    <div class="col-sm-12 col-md-8">
-        <div class="row">
-            <!-- Блок заявок -->
-            <div class="col-sm-12 col-md-12">
-                <h3 class="text-left">Заявки</h3>
+    <div class="row">
+        <!-- Блок лого и навигационных цепочек -->
+        {% include "_title_links.html" %}
+        <!-- Основной контент-->
+        <div class="hidden-xs hidden-sm col-md-2"></div>
+        <div class="col-sm-12 col-md-8">
+            <div class="row">
+                <!-- Блок заявок -->
+                <div class="col-sm-12 col-md-12">
+                    <h3 class="text-left">Заявки</h3>
+                </div>
+                {% include "_list_of_bids.html" %}
+                <div class="col-sm-12 col-md-12 center-block">
+                    <button type="submit" class="btn btn-info btn-lg center-block">Показать еще</button>
+                </div>
+                <!-- Пагинатор -->
+                {% include "_paginator.html" %}
             </div>
-            {% include "_list_of_bids.html" %}
-            <div class="col-sm-12 col-md-12 center-block">
-                <button type="submit" class="btn btn-info btn-lg center-block">Показать еще</button>
-            </div>
-            <!-- Пагинатор -->
-            {% include "_paginator.html" %}
         </div>
+        <div class="hidden-xs hidden-sm col-md-2"></div>
     </div>
-    <div class="hidden-xs hidden-sm col-md-2"></div>
 {% endblock %}
 {% block footer %}
     {% include "_form_provider.html" %}

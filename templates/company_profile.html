@@ -3,54 +3,56 @@
 {{ title }}
 {% endblock %}
 {% block main %}
-    <!-- Блок лого и навигационных цепочек -->
-    {% include "_title_links.html" %}
-    <!-- Основной контент-->
-    <div class="hidden-xs hidden-sm col-md-2"></div>
-    <div class="col-sm-12 col-md-8">
-        <div class="row">
-            <!-- Информация о компании -->
-            <div class="col-sm-12 col-md-12 border-all">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12">
-                        <div class="row">
-                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                <img class="all-width logo-vcenter" src="{{ logo }}" alt="Логотип">
-                            </div>
-                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h4>{{ name }}</h4>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-sm-8 col-md-8 col-lg-8">
-                                                <p>Место деятельности: {{ region }}</p>
-                                                <p>Продукция: {{ products }}</p>
-                                                <p>Адрес: {{ address }}</p>
-                                                <p>Телефон: {{ phone }}</p>
-                                            </div>
-                                            <div class="col-sm-4 col-md-4 col-lg-4 text-left">
-                                                <p><a class="btn btn-info" href="#" role="button">Оставить заявку <br> этой компании</a></p>
+    <div class="row">
+        <!-- Блок лого и навигационных цепочек -->
+        {% include "_title_links.html" %}
+        <!-- Основной контент-->
+        <div class="hidden-xs hidden-sm col-md-2"></div>
+        <div class="col-sm-12 col-md-8">
+            <div class="row">
+                <!-- Информация о компании -->
+                <div class="col-sm-12 col-md-12 border-all">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="row">
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                    <img class="all-width logo-vcenter" src="{{ logo }}" alt="Логотип">
+                                </div>
+                                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>{{ name }}</h4>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-sm-8 col-md-8 col-lg-8">
+                                                    <p>Место деятельности: {{ region }}</p>
+                                                    <p>Продукция: {{ products }}</p>
+                                                    <p>Адрес: {{ address }}</p>
+                                                    <p>Телефон: {{ phone }}</p>
+                                                </div>
+                                                <div class="col-sm-4 col-md-4 col-lg-4 text-left">
+                                                    <p><a class="btn btn-info" href="#" role="button">Оставить заявку <br> этой компании</a></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12">
-                        <p> {{ about }}</p>
-                        <p><a href="#" role="button">Оставить заявку этой компании</a></p>
+                        <div class="col-sm-12 col-md-12">
+                            <p> {{ about }}</p>
+                            <p><a href="#" role="button">Оставить заявку этой компании</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-12">
-                <p><br><a href="companies_all.html" role="button">Все организации Новосибирска и области</a><br></p>
+                <div class="col-sm-12 col-md-12">
+                    <p><br><a href="companies_all.html" role="button">Все организации Новосибирска и области</a><br></p>
+                </div>
             </div>
         </div>
+        <div class="hidden-xs hidden-sm col-md-2"></div>
     </div>
-    <div class="hidden-xs hidden-sm col-md-2"></div>
 {% endblock %}
 {% block footer %}
     {% include "_form_provider.html" %}
