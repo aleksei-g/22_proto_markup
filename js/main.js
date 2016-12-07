@@ -1,7 +1,5 @@
 $(function(){
-  $("#f-bid-phone").mask("+7(999) 999-9999");
-  $("#f-provider-phone").mask("+7(999) 999-9999");
-  $("#f-company-phone").mask("+7(999) 999-9999");
+  $(".phone-mask").mask("+7(999) 999-9999");
   $('#button_error_region').click(function(open_select_region){
     open_select_region.stopPropagation();
     $('#button_navbar_toggle').click();
