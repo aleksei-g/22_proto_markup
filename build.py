@@ -1,123 +1,87 @@
 import staticjinja
 
 
-def get_user():
-    return 'Леонид Федорович'
+basic_info = {
+    'user': 'Леонид Федорович',
+    'regions': {'selected_region': 'Новосибирск и область',
+                'list_region': [
+                    {'url': '#', 'name': 'Новосибирск и область'},
+                    {'url': '#', 'name': 'Москва и область'},
+                    {'url': '#', 'name': 'Нижний новгород и область'},
+                    {'url': '#', 'name': 'Киров и область'},
+                ],
+                },
+}
+bind = {
+    'publication_datetime': 'Вчера, в 21:30',
+    'user_name': 'Алексей',
+    'count_views': 12,
+    'bind_text': '60 шт. ПК от 72-15 до ПК 21-15, '
+                 'Криводановка, с доставкой.',
+}
+comment = {'user_avatar': 'img/avatar_default.png',
+           'user_name': 'Кирилл',
+           'user_age': 29,
+           'user_city': 'Барабинск',
+           'comment_text': """Бла, бла, бла! Мне помогло, все супер!
+                            Бла, бла, бла! Мне помогло, все супер!
+                            Бла, бла, бла! Мне помогло, все супер!""",
+           }
+company = {'name': 'ООО Сторой-Сервис-Монтаж',
+           'region': 'Новосибирск',
+           'products': 'ЖБИ, бетон',
+           'address': 'Под часами, на том же месте',
+           'phone': '00-00-00',
+           'logo': 'img/company_default.png',
+           'url': 'company_profile.html'
+           }
+product = {'name': 'ЖБИ',
+           'url': 'companies_filter.html',
+           'img': 'img/jbi.jpeg',
+           }
+index_page_data = {
+    'title': 'Поставщики Новосибирска',
+    'list_of_binds': [bind for number in range(4)],
+    'list_of_comments': [comment for number in range(3)],
+    'need_to_show_notify_message': 1,
+}
+index_page_data.update(basic_info)
+binds_page_data = {
+    'title': 'Заявки',
+    'list_of_binds': [bind for number in range(10)],
+    'list_links': [{'url': 'index.html', 'title': 'Главная'},
+                   {'url': 'binds.html', 'title': 'Заявки'},
+                   ],
 
-
-def get_bind():
-    return {'publication_datetime': 'Вчера, в 21:30',
-            'user_name': 'Алексей',
-            'count_views': 12,
-            'bind_text': '60 шт. ПК от 72-15 до ПК 21-15, '
-                         'Криводановка, с доставкой.',
-            }
-
-
-def get_regions():
-    return {'selected_region': 'Новосибирск и область',
-            'list_region': [{'url': '#', 'name': 'Новосибирск и область'},
-                            {'url': '#', 'name': 'Москва и область'},
-                            {'url': '#', 'name': 'Нижний новгород и область'},
-                            {'url': '#', 'name': 'Киров и область'},
-                            ],
-            }
-
-
-def get_company():
-    return {'name': 'ООО Сторой-Сервис-Монтаж',
-            'region': 'Новосибирск',
-            'products': 'ЖБИ, бетон',
-            'address': 'Под часами, на том же месте',
-            'phone': '00-00-00',
-            'logo': 'img/company_default.png',
-            'url': 'company_profile.html'
-            }
-
-
-def get_product():
-    return {'name': 'ЖБИ',
-            'url': 'companies_filter.html',
-            'img': 'img/jbi.jpeg',
-            }
-
-
-def index_page():
-    title = 'Поставщики Новосибирска'
-    list_of_binds = [get_bind(), get_bind(), get_bind(), get_bind()]
-    comment = {'user_avatar': 'img/avatar_default.png',
-               'user_name': 'Кирилл',
-               'user_age': 29,
-               'user_city': 'Барабинск',
-               'comment_text': """Бла, бла, бла! Мне помогло, все супер!
-                                Бла, бла, бла! Мне помогло, все супер!
-                                Бла, бла, бла! Мне помогло, все супер!""",
-               }
-    list_of_comments = [comment, comment, comment]
-    return {'title': title,
-            'user': get_user(),
-            'regions': get_regions(),
-            'list_of_binds': list_of_binds,
-            'list_of_comments': list_of_comments,
-            'need_to_show_notify_message': 1,
-            }
-
-
-def binds_page():
-    title = 'Заявки'
-    list_of_binds = [get_bind(), get_bind(), get_bind(), get_bind(),
-                     get_bind(), get_bind(), get_bind(), get_bind(),
-                     get_bind(), get_bind()]
-    list_links = [{'url': 'index.html', 'title': 'Главная'},
-                  {'url': 'binds.html', 'title': 'Заявки'},
-                  ]
-    return {'title': title,
-            'user': get_user(),
-            'regions': get_regions(),
-            'list_of_binds': list_of_binds,
-            'list_links': list_links,
-            'need_to_show_notify_message': 0,
-            }
-
-
-def companies_page():
-    title = 'Каталог организаций'
-    title_main = 'Все производители и оптовые компании'
-    list_links = [{'url': 'index.html', 'title': 'Главная'},
-                  {'url': 'companies_all.html',
-                   'title': 'Каталог организаций'},
-                  ]
-    list_of_companies = [get_company(), get_company(), get_company(),
-                         get_company(), get_company(), get_company()]
-    list_of_products = [get_product(), get_product(), get_product(),
-                        get_product()]
-    return {'title': title,
-            'user': get_user(),
-            'regions': get_regions(),
-            'title_main': title_main,
-            'list_links': list_links,
-            'list_of_companies': list_of_companies,
-            'list_of_products': list_of_products,
-            'need_to_show_notify_message': 0,
-            }
-
-
-def companies_filter_page(filter_products='ЖБИ'):
-    params = companies_page()
-    params['title'] = 'Каталог огранизаций | ' + filter_products
-    params['title_main'] = 'Производители и оптовые компании в Новосибирске' \
-                           ' и области'
-    params['filter_products'] = filter_products
-    params['list_links'].append({'url': 'companies_filter.html',
-                                 'title': filter_products})
-    params['need_to_show_notify_message'] = 0
-    return params
-
-
-def company_profile_page():
-    params = get_company()
-    params['title'] = 'Информация о компании'
-    params['about'] = """
+}
+binds_page_data.update(basic_info)
+companies_page_data = {
+    'title': 'Каталог организаций',
+    'title_main': 'Все производители и оптовые компании',
+    'list_links': [{'url': 'index.html', 'title': 'Главная'},
+                   {'url': 'companies_all.html',
+                    'title': 'Каталог организаций'},
+                   ],
+    'list_of_companies': [company for number in range(6)],
+    'list_of_products': [product for number in range(4)],
+}
+companies_page_data.update(basic_info)
+companies_filter_page_data = {
+    'title': 'Каталог огранизаций | ЖБИ',
+    'title_main': 'Производители и оптовые компании в Новосибирске и области',
+    'filter_products': 'ЖБИ',
+    'list_links': [{'url': 'index.html', 'title': 'Главная'},
+                   {'url': 'companies_all.html',
+                    'title': 'Каталог организаций'},
+                   {'url': 'companies_filter.html', 'title': 'ЖБИ'},
+                   ],
+    'list_of_companies': [company for number in range(6)],
+    'list_of_products': [product for number in range(4)],
+}
+companies_filter_page_data.update(basic_info)
+company_profile_page_data = {
+    'title': 'Информация о компании',
+    'about': """
     Физики, специализирующиеся в новой дисциплине, атомтронике, занимаются
     созданием аналогов электронных схем из систем атомов, используя лазеры
     и магнитные поля. В Joint Quantum Institute (JQI) на примере сверхтекучей
@@ -133,43 +97,37 @@ def company_profile_page():
     в тороидальной ловушке, габаритами чуть больше человеческого эритроцита,
     а сфокусированный лазерный луч использовался, чтобы заставить полученную
     квантовую жидкость двигаться по кольцу.
-    """
-    params['list_links'] = \
-        [{'url': 'index.html', 'title': 'Главная'},
-         {'url': 'companies_all.html', 'title': 'Каталог организаций'},
-         {'url': 'companies_filter.html', 'title': 'ЖБИ'},
-         {'url': 'company_profile.html', 'title': params['name']},
-         ]
-    params['regions'] = get_regions()
-    params['user'] = get_user()
-    params['need_to_show_notify_message'] = 0
-    return params
-
-
-def pesonal_page():
-    title = 'Личный кабинет'
-    list_links = [{'url': 'index.html', 'title': 'Главная'},
-                  {'url': 'personal.html', 'title': 'Личный кабинет'},
-                  ]
-    return {'title': title,
-            'user': get_user(),
-            'regions': get_regions(),
-            'list_links': list_links,
-            'need_to_show_notify_message': 0,
-            }
+    """,
+    'list_links': [{'url': 'index.html', 'title': 'Главная'},
+                   {'url': 'companies_all.html',
+                    'title': 'Каталог организаций'},
+                   {'url': 'companies_filter.html', 'title': 'ЖБИ'},
+                   {'url': 'company_profile.html', 'title': company['name']},
+                   ],
+}
+company_profile_page_data.update(basic_info)
+company_profile_page_data.update(company)
+pesonal_page_data = {
+    'title': 'Личный кабинет',
+    'list_links': [{'url': 'index.html', 'title': 'Главная'},
+                   {'url': 'personal.html', 'title': 'Личный кабинет'},
+                   ],
+}
+pesonal_page_data.update(basic_info)
 
 
 if __name__ == "__main__":
-    site = staticjinja.make_site(outpath="site",
-                                 contexts=[('index.html', index_page()),
-                                           ('binds.html', binds_page()),
+    site = staticjinja.make_site(outpath='site',
+                                 contexts=[('index.html', index_page_data),
+                                           ('binds.html', binds_page_data),
                                            ('companies_all.html',
-                                            companies_page()),
+                                            companies_page_data),
                                            ('companies_filter.html',
-                                            companies_filter_page('ЖБИ')),
+                                            companies_filter_page_data),
                                            ('company_profile.html',
-                                           company_profile_page()),
-                                           ('personal.html', pesonal_page()),
+                                           company_profile_page_data),
+                                           ('personal.html',
+                                            pesonal_page_data),
                                            ]
                                  )
     site.render(use_reloader=True)
