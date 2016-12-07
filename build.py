@@ -160,7 +160,8 @@ def pesonal_page():
 
 
 if __name__ == "__main__":
-    site = staticjinja.make_site(contexts=[('index.html', index_page()),
+    site = staticjinja.make_site(outpath="site",
+                                 contexts=[('index.html', index_page()),
                                            ('binds.html', binds_page()),
                                            ('companies_all.html',
                                             companies_page()),
