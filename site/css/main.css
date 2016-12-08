@@ -78,7 +78,9 @@
 }
 
 .product {
-    height: 200px;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .h3-margin {
