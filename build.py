@@ -117,7 +117,7 @@ pesonal_page_data.update(basic_info)
 
 
 if __name__ == "__main__":
-    site = staticjinja.make_site(outpath='site',
+    site = staticjinja.make_site(outpath='docs',
                                  contexts=[('index.html', index_page_data),
                                            ('binds.html', binds_page_data),
                                            ('companies_all.html',
