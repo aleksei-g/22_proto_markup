@@ -10,7 +10,7 @@ $(function(){
 function ShowNotifyMessage() {
   $.notify({
   // options
-  message: MessageRegion
+  message: document.getElementById("message-notify").innerText
   },{
   // settings
   type: 'info',
@@ -25,7 +25,7 @@ function ShowNotifyMessage() {
   },
   delay: 0,
   mouse_over: 'pause',
-  template: AlertTemplate
+  template: document.getElementById("template-notify").innerText
   });
 }
 
